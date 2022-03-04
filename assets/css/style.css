@@ -225,3 +225,57 @@ section .title::after {
     color: #f86000;
     background: none;
 }
+
+/* About Styles */
+
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: #f86000;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    font-size: 23px;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: #f86000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #f86000;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: #f86000;
+    background: none;
+}
