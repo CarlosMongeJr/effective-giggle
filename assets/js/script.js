@@ -40,4 +40,46 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
+
+    // Owl carousel
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
+
+    // Form Submission message
+
+    let nameInput = document.querySelector("#fname");
+    let emailInput = document.querySelector("#femail");
+    let submitEl = document.querySelector("#sendmessage");
+    let submissionResponseEl = document.querySelector("#response");
+
+    // Action to be performed on click store in named function
+    function showResponse(event) {
+        // Prevent default action
+        event.preventDefault();
+        console.log(event);
+        let response = "Thank you for your submission " + nameInput.value + "! We will reach out to you at " + emailInput.value + ".";
+        submissionResponseEl.textContent = response;
+    }
+
+    // Add listener to submit element
+    submitEl.addEventListener("click", showResponse);
+
 });
